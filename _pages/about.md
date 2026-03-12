@@ -17,7 +17,7 @@ working on image forensics and visual reasoning. This site contains my publicati
 and projects related to multimedia security and analysis.
 
 <p align="center">
-  <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Shaofeng Guo profile photo" width="220" style="border-radius: 12px;" />
+  <img src="{{ '/images/gsf.jpg' | relative_url }}" alt="Shaofeng Guo profile photo" width="220" style="border-radius: 12px;" />
 </p>
 
 ## 📬 Contact
