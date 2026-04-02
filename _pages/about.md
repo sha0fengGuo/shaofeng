@@ -25,7 +25,8 @@ and projects related to multimedia security and analysis.
 - Google Scholar: [My profile](https://scholar.google.com/citations?hl=en&user=UBCS-zsAAAAJ&scilu=&scisig=ACUpqDcAAAAAaLsDrdC3shQ3rrUcQRgOmDFymqA&gmla=AH8HC4yIMt86aRUoS4xW8WS_nOh5v8Y57XYbVi_PusYdCqmy2dQ6fM2YppnuAA3TuedBpNqTl6CWV7AVn9KkUNUoRuhafY2NzrJRVTU&sciund=6415130130695938645)
 - GitHub: [sha0fengGuo](https://github.com/sha0fengGuo)
 
-## 📅 Google Calendar
+## 📅 My Google Calendar
+If I have no schedule or am not occupied during this period, you can contact me at any time.
 
 <div style="position: relative; width: 100%; overflow: hidden; padding-top: 75%; margin: 1.5rem 0;">
   <iframe
@@ -36,6 +37,6 @@ and projects related to multimedia security and analysis.
   </iframe>
 </div>
 
-For more details, see the backup copy at `about_local.md` in the repository root.
+
 
 To view my publications or blog posts, use the "Publications" or "Blog Posts" links in the navigation bar above.
