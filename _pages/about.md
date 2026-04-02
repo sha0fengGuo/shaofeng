@@ -25,6 +25,17 @@ and projects related to multimedia security and analysis.
 - Google Scholar: [My profile](https://scholar.google.com/citations?hl=en&user=UBCS-zsAAAAJ&scilu=&scisig=ACUpqDcAAAAAaLsDrdC3shQ3rrUcQRgOmDFymqA&gmla=AH8HC4yIMt86aRUoS4xW8WS_nOh5v8Y57XYbVi_PusYdCqmy2dQ6fM2YppnuAA3TuedBpNqTl6CWV7AVn9KkUNUoRuhafY2NzrJRVTU&sciund=6415130130695938645)
 - GitHub: [sha0fengGuo](https://github.com/sha0fengGuo)
 
+## 📅 Google Calendar
+
+<div style="position: relative; width: 100%; overflow: hidden; padding-top: 75%; margin: 1.5rem 0;">
+  <iframe
+    src="https://calendar.google.com/calendar/embed?src=1kingto1top%40gmail.com&ctz=Asia%2FShanghai"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
+</div>
+
 For more details, see the backup copy at `about_local.md` in the repository root.
 
 To view my publications or blog posts, use the "Publications" or "Blog Posts" links in the navigation bar above.
