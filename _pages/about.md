@@ -28,7 +28,7 @@ and projects related to multimedia security and analysis.
 ## 📅 My Google Calendar
 If I have no schedule or am not occupied during this period, you can contact me at any time.
 
-<div style="position: relative; width: 100%; overflow: hidden; padding-top: 75%; margin: 1.5rem 0;">
+<div style="position: relative; width: 100%; max-width: 900px; height: 520px; overflow: hidden; margin: 1.5rem auto;">
   <iframe
     src="https://calendar.google.com/calendar/embed?src=1kingto1top%40gmail.com&ctz=Asia%2FShanghai"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
