@@ -3,7 +3,9 @@ title: "Rethinking VLMs for Image Forgery Detection and Localization"
 collection: publications
 category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the role of vlms in fake image detection and localization '
+excerpt: |
+  Why: Pre-trained VLMs are inherently biased toward semantic plausibility rather than visual authenticity, causing their direct application to hardly benefit image forgery detection.
+  What: A new framework (IFDL-VLM) that decouples detection optimization from explanation generation, using location masks as extra priors to enhance VLM interpretability and detection performance
 date: 2026-03-12
 venue: 'CVPR Findings'
 slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
