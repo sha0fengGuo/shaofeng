@@ -6,3 +6,4 @@
 @media(max-width:520px){.education{grid-template-columns:1fr}}
 
 .quick-links .profile-link{display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border:1px solid #e4c98e;border-radius:999px;background:#fff3d3;color:#6b4825;box-shadow:0 5px 0 rgba(198,139,44,.12);transition:.2s}.quick-links .profile-link:hover{transform:translateY(-2px);background:var(--accent);border-color:var(--accent);color:#2b2119}.quick-links .profile-link span{margin-left:0}.dark-mode .quick-links .profile-link{background:#6c432a;border-color:#b9823f;color:#fff5df}.dark-mode .quick-links .profile-link:hover{background:var(--accent);color:#2b2119}
+.education-section{padding-top:95px;padding-bottom:95px}.education-section>.education{max-width:100%;margin-top:55px}.education-section .section-intro{max-width:520px}
