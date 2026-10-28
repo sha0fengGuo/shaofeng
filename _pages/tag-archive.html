@@ -1,17 +1,102 @@
 ---
-layout: archive
 permalink: /tags/
-title: "Posts by Tags"
-author_profile: true
+layout: null
 ---
-
 {% include base_path %}
-{% include group-by-array collection=site.posts field="tags" %}
+{% assign visible_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+{% include group-by-array collection=visible_posts field="tags" %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Shaofeng Guo's research notes organized by topic." />
+  <title>Notes by topic · Shaofeng Guo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
+</head>
+<body class="archive-page">
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark">SG</span><span>Shaofeng Guo</span></a>
+    <nav>
+      <a href="{{ '/' | relative_url }}#research">Research</a>
+      <a href="{{ '/' | relative_url }}#publications">Publications</a>
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">☼</button>
+    </div>
+  </header>
 
-{% for tag in group_names %}
-  {% assign posts = group_items[forloop.index0] %}
-  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endfor %}
+  <main>
+    <section class="archive-hero shell">
+      <p class="eyebrow"><span class="dot"></span> Blog / tag index</p>
+      <h1>Notes by<br><em>topic.</em></h1>
+      <p class="archive-lede">Short research notes, reading traces, and experiments gathered around the questions I am exploring.</p>
+      <div class="archive-stats">
+        <span>{{ visible_posts | size }} notes</span>
+        <span>{{ group_names | size }} topics</span>
+      </div>
+    </section>
+
+    {% if group_names.size > 0 %}
+    <section class="topic-index shell" aria-label="Topics">
+      <p class="mono-label">Browse topics</p>
+      <div class="topic-index-list">
+        {% for tag in group_names %}
+          {% assign tag_label = tag %}
+          {% case tag %}
+            {% when 'multimodal-reasoning' %}{% assign tag_label = 'Multimodal reasoning' %}
+            {% when 'streaming-video' %}{% assign tag_label = 'Streaming video & memory' %}
+            {% when 'agents-self-distillation' %}{% assign tag_label = 'Agents & self-distillation' %}
+            {% when 'multimodal-safety' %}{% assign tag_label = 'Multimodal safety' %}
+          {% endcase %}
+          <a class="topic-chip" href="#{{ tag | slugify }}">{{ tag_label }} <span>{{ group_items[forloop.index0] | size }}</span></a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="topic-groups shell">
+      {% for tag in group_names %}
+        {% assign posts = group_items[forloop.index0] %}
+        {% assign tag_label = tag %}
+        {% case tag %}
+          {% when 'multimodal-reasoning' %}{% assign tag_label = 'Multimodal reasoning' %}
+          {% when 'streaming-video' %}{% assign tag_label = 'Streaming video & memory' %}
+          {% when 'agents-self-distillation' %}{% assign tag_label = 'Agents & self-distillation' %}
+          {% when 'multimodal-safety' %}{% assign tag_label = 'Multimodal safety' %}
+        {% endcase %}
+        <section class="topic-group" id="{{ tag | slugify }}">
+          <header class="topic-heading">
+            <div>
+              <p class="eyebrow"><span class="dot"></span> Topic {{ forloop.index | prepend: '0' | slice: -2, 2 }}</p>
+              <h2>{{ tag_label }}</h2>
+            </div>
+            <span class="topic-count">{{ posts | size }} notes</span>
+          </header>
+          <div class="note-grid">
+            {% for post in posts %}
+              <article class="note-card">
+                <p class="note-card-meta">{{ post.date | date: "%b %d, %Y" }}{% if post.categories %} · {{ post.categories | join: ", " }}{% endif %}</p>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                {% if post.excerpt %}<div class="note-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</div>{% endif %}
+                <a class="card-link" href="{{ post.url | relative_url }}">Read note <span>↗</span></a>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    </section>
+    {% else %}
+      <section class="section shell archive-empty"><p class="section-intro">No notes have been published yet.</p></section>
+    {% endif %}
+  </main>
+
+  <footer class="footer shell"><span>© 2026 Shaofeng Guo · 郭绍锋</span><span class="mono-label">Built for curious minds · Hefei / China</span></footer>
+  <script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+</html>
